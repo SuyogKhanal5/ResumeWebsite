@@ -1,3 +1,3 @@
-# New Website
+# Resume Website
 
 - index.html - Webpage
