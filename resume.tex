@@ -1,0 +1,254 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Suyog Khanal} \\ \vspace{4pt}
+    \small \href{https://suyogkhanal.com/}{\raisebox{-0.2\height}\faGlobe\ \underline{suyogkhanal.com}} ~ \href{mailto:suyogkhanal@outlook.com} {\raisebox{-0.2\height}\faEnvelope\  \underline{suyogkhanal@outlook.com}} ~ \href{https://www.linkedin.com/in/suyog-khanal}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/suyog-khanal}}  ~
+    \href{https://github.com/SuyogKhanal5}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/SuyogKhanal5}}
+    \vspace{-8pt}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Rutgers University - New Brunswick}{Graduation Date: Jan 2026}
+      {BA Computer Science and BA Data Science, Double Major}{}
+  \resumeSubHeadingListEnd
+  \begin{itemize}[leftmargin=0.00in, label={}]
+    \small{\item{
+     \textbf{Relevant Coursework}{: Deep Learning, Applied Statistical Learning, Regression Methods, Data Science, Linear Algebra, Statistics, Computer Architecture, Algorithm Analysis and Design, Systems Programming, Bayesian Data Analysis}
+    }}
+    \vspace{-4pt}
+    \small{\item{
+     \textbf{Leadership}{: Rutgers Destiny Treasurer 2023-2024, and Rutgers Destiny President 2024-2025}
+    }}
+ \end{itemize}
+
+     \vspace{-15pt}
+
+%---------INTERNSHIPS----------
+\section{Work Experience}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading{\textbf{CareMagix} $|$ \emph{Software Engineer} $|$ Remote}{Jun 2025 - Aug 2025}
+            \resumeItemListStart
+                \resumeItem{
+                    Led team of 4 developers, driving delivery of website features and defect resolution.}
+                \resumeItem{
+                    Built vector embedded lancedb database of 70K+ diagnostic (ICD) codes, queried to map sentences to relevant codes.}
+                \resumeItem{
+                    Programmed custom Python class to access and query database, tested and deployed tool in production.}
+            \resumeItemListEnd
+            \vspace{-15pt}
+        \resumeProjectHeading{\textbf{UBS} $|$ \emph{Data Engineering Intern} $|$ Weehawken, NJ}{Jun 2024 - Aug 2024}
+            \resumeItemListStart
+                \resumeItem{Used Databricks to create data pipelines; ingested and transformed data using Python and SQL to create clean tables.}
+                \resumeItem {Automated secret rotation of application accounts, and integrating rotation with Azure pipelines for 100+ developers.}
+                \resumeItem {Designed and demoed a SharePoint site that sent forms to shared Excel Sheet using Power Automate Flow.}
+                \resumeItem {Composed solution to help employees find team members with similarity search; presented product to 30+ stakeholders.}
+                \resumeItem {Fixed job dependency issue caused by incorrect synchronization configuration, potentially reducing delays by 50\%.}
+            \resumeItemListEnd
+            \vspace{-15pt}
+        \resumeProjectHeading{\textbf{Compunnel} $|$ \emph{Data Analysis Intern} $|$ Plainsboro, NJ}{Jun 2023 - Aug 2023}
+            \resumeItemListStart
+                \resumeItem {Leveraged machine learning algorithms to create a Customer Lifetime Value prediction model.} 
+                \resumeItem {Analyzed over 500,000 rows of data to calculate RFM scores and segment customers and created PowerBI reports.}
+            \resumeItemListEnd
+            \vspace{-15pt}
+        \resumeProjectHeading{\textbf{Commvault} $|$ \emph{Software Engineering Intern} $|$ Tinton Falls, NJ}{May 2022 - Aug 2022}
+            \resumeItemListStart
+                \resumeItem {Managed Virtual Machines, and used Python/PowerShell to run software/OS updates and automate 50+ machine snapshots.}
+                \resumeItem {Developed a database table accessed by Python backend and report/workflow to manage 100+ VM allocations.}
+            \resumeItemListEnd
+    \resumeSubHeadingListEnd
+%-----------PROJECTS-----------
+\section{Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+                {\textbf{\href{https://github.com/SuyogKhanal5/LoL-Rank-Visualization-Pipeline}{Rank Visualization ETL Pipeline}} $|$ \emph{Python, Snowflake, SQL, APIs, Streamlit}}{Mar 2026 - Mar 2026}
+                    \resumeItemListStart
+                        \resumeItem {Built an end-to-end player analytics platform, extracting data from Riot Games API to show custom graphs. }
+                        \resumeItem {Automated API ingestion with stored procedures and Snowflake Tasks that would automatically fetch and clean data.}
+                        \resumeItem{Developed a Streamlit in Snowflake dashboard with Altair visualizations to allow end user to fully customize insights.}
+                    \resumeItemListEnd
+                    \vspace{-15pt}
+        \resumeProjectHeading
+                {\textbf{\href{https://github.com/SuyogKhanal5/LeagueProPrediction}{Esports Game Prediction Model}} $|$ \emph{Python, SQL, Pandas}}{Nov 2024 – Dec 2024}
+                    \resumeItemListStart
+                        \resumeItem {Cleaned and analyzed 100,000+ rows of League of Legends esports data to build a model predicting game outcomes from the first 15 minutes.}
+                    \resumeItemListEnd
+                    \vspace{-15pt}
+        \resumeProjectHeading
+                {\textbf{\href{https://github.com/SuyogKhanal5/StreetFighterAI/tree/reward-branch}{Street Fighter AI}} $|$ \emph{Python, OpenAI Gym}}{Oct 2024 – Nov 2024}
+                    \resumeItemListStart
+                        \resumeItem {Trained a model to play Street Fighter 2 using Gym; utilized PPO and wrote a custom reward function.}
+                    \resumeItemListEnd
+                    \vspace{-15pt}
+        \resumeProjectHeading
+                {\textbf{\href{https://github.com/SuyogKhanal5/CNN-Geoguesser}{CNN Geoguessr}} $|$ \emph{Python, Google Maps API}}{April 2025 - May 2025}
+                    \resumeItemListStart
+                        \resumeItem {Trained Convolutional Neural Network on Street View images to predict photo's country; demoed to 50+ people.}
+                    \resumeItemListEnd
+                    \vspace{-15pt}
+        \resumeProjectHeading
+                {\textbf{\href{https://github.com/SuyogKhanal5/Shockwave}{Shockwave}} $|$ \emph{Python, SQL, discord.py, Pillow} $|$ \href{https://shockwave.netlify.app}{shockwave.netlify.app}}{Jun 2022 – Present}
+                    \resumeItemListStart
+                        \resumeItem {Built a Discord bot for gaming communities with random/draft/elo-balanced team formation and tournament brackets.}
+                        \resumeItem {Designed a gold-based betting economy and a 17-achievement trading-card cosmetic system rendered using Pillow.}
+                        \resumeItem {Maintained reliability with a 650+ unit test suite covering game state, brackets, and economy transactions.}
+                    \resumeItemListEnd
+                    \vspace{-15pt}
+    \resumeSubHeadingListEnd
+    
+\vspace{5pt}
+
+\section{Certifications}
+
+         \begin{itemize}[leftmargin=0.00in, label={}]
+            \item{
+         \textbf{Advanced Data Engineering with Snowflake} $|$ \emph{Snowflake} $|$ \href{https://www.coursera.org/account/accomplishments/verify/XX9MCCAX21FW}{XX9MCCAX21FW} \textbf{\hfill Feb 2026}
+        }
+
+        \vspace{-8pt}
+            \item{
+         \textbf{Advanced Data Management in Azure Databricks} $|$ \emph{Packt} $|$ \href{https://https://www.coursera.org/account/accomplishments/verify/SE5LLCBILCSS}{SE5LLCBILCSS} \textbf{\hfill May 2026}
+        }
+     \end{itemize}
+
+%-----------PROGRAMMING SKILLS-----------
+\vspace{-10pt}
+\section{Technical Skills}
+     \begin{itemize}[leftmargin=0.00in, label={}]
+        \small{\item{
+         \textbf{Languages}{: Python, SQL, C, Java, R} \\
+         \vspace{2pt}
+         \textbf{Developer Tools}{: Git, gdb, VS Code, Unix, MongoDB, HTML, Snowflake, DataBricks, Azure, PowerBI, MATLAB, React} \\
+         \vspace{2pt}
+         \textbf{Technologies/Frameworks}{: OpenCV, MongoDB, Docker, SharePoint, Pandas, Mediapipe, PyTorch, Tensorflow, LanceDB } \\
+         \vspace{2pt}
+         \textbf{Concepts}{: Machine Learning, CI/CD and ETL Pipelines, Reinforcement Learning, Object Oriented Programming, AI/LLMs } \\
+         \vspace{2pt}
+         \textbf{Interests}{: Music/Music Production, Fishing, Reading, Gaming} \\
+        }}
+     \end{itemize}
+
+\end{document}
