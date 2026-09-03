@@ -407,14 +407,17 @@
 
     <div class="project-card" style="grid-column:1/-1;">
       <h3>Shockwave</h3>
-      <span class="project-date mono">Jun 2022 – Present · <a href="https://shockwave.netlify.app" target="_blank" rel="noopener" class="project-link">shockwave.netlify.app</a></span>
+      <span class="project-date mono">Jun 2022 – Present · <a href="https://addshockwave.com" target="_blank" rel="noopener" class="project-link">addshockwave.com</a></span>
       <ul>
-        <li>Built and launched a Discord bot that creates and manages teams for custom games and tournaments, with its own Elo system.</li>
-        <li>Added random/draft/Elo-balanced team formation and tournament brackets for gaming communities.</li>
-        <li>Designed a gold-based betting economy and a 17-achievement trading-card cosmetic system rendered with Pillow.</li>
-        <li>Maintained reliability with a 650+ unit test suite covering game state, brackets, and economy transactions.</li>
+        <li>Architected and maintain a 37,000-line production Discord bot serving 57 slash commands across 8 command groups for multiple concurrent Discord servers, backed by a single shared SQLite database.</li>
+        <li>Built a 1,339-test suite (190 test classes) covering async event handlers, button interactions, and database mutations with hand-rolled fakes instead of a mocking framework, parallelized with pytest-xdist.</li>
+        <li>Embedded a self-hosted CI pipeline that runs the full test suite on every boot, parses the JUnit XML report, and alerts on regressions before the bot starts serving.</li>
+        <li>Engineered a concurrency-safe SQLite layer with WAL mode, a trace-callback audit log of every write, and a self-healing migration system that's added ~45 columns to a live table with zero downtime — plus automated point-in-time backups via SQLite's native backup API.</li>
+        <li>Built a persistent Discord UI layer (buttons/views that survive restarts) with race-condition guards preventing concurrent actions from corrupting in-progress game state.</li>
+        <li>Implemented a live single/double-elimination bracket engine with seeded matchmaking and concurrent per-match betting, alongside a Pillow-based rendering pipeline (2x supersampling, Lanczos resampling) for trading cards and achievement badges.</li>
+        <li>Designed an elo-based, role-aware matchmaking system and a full virtual economy — wagering, daily rewards, transfers, a cosmetics shop, and rarity-tiered trading cards — plus maintainer alerting that DMs the developer on errors.</li>
       </ul>
-      <div class="stack"><span>Python</span><span>SQL</span><span>discord.py</span><span>Pillow</span><span>MongoDB (originally)</span></div>
+      <div class="stack"><span>Python</span><span>SQLite</span><span>discord.py</span><span>Pillow</span><span>pytest-xdist</span></div>
     </div>
   </div>
 
